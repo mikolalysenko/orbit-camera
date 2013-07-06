@@ -91,21 +91,32 @@ proto.lookAt = function(eye, center, up) {
 }
 
 proto.pan = function(dpan) {
-  scratch0[0] = dpan[0]||0
-  scratch0[1] = dpan[1]||0
-  scratch0[2] = dpan[2]||0
+  var d = this.distance
+  scratch0[0] = -d*(dpan[0]||0)
+  scratch0[1] =  d*(dpan[1]||0)
+  scratch0[2] =  d*(dpan[2]||0)
   vec3.transformQuat(scratch0, scratch0, this.rotation)
   vec3.add(this.center, this.center, scratch0)
 }
 
 proto.zoom = function(d) {
   this.distance += d
+  if(this.distance < 0.0) {
+    this.distance = 0.0
+  }
 }
 
 function quatFromVec(out, da) {
+  var x = da[0]
+  var y = da[1]
+  var z = da[2]
+  var s = x*x + y*y
+  if(s > 1.0) {
+    s = 1.0
+  }
   out[0] = -da[0]
   out[1] =  da[1]
-  out[2] =  da[2] || Math.sqrt(1.0 - da[0]*da[0] - da[1]*da[1])
+  out[2] =  da[2] || Math.sqrt(1.0 - s)
   out[3] =  0.0
 }
 

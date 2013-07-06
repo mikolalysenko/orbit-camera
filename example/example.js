@@ -40,8 +40,8 @@ shell.on("tick", function() {
                   [shell.prevMouseX/shell.width-0.5, shell.prevMouseY/shell.height-0.5])
   }
   if(shell.wasDown("mouse-right")) {
-    camera.pan([10*(shell.mouseX-shell.prevMouseX)/shell.width,
-                10*(shell.mouseY - shell.prevMouseY)/shell.height])
+    camera.pan([(shell.mouseX - shell.prevMouseX)/shell.width,
+                (shell.mouseY - shell.prevMouseY)/shell.height])
   }
   if(shell.scroll[1]) {
     camera.zoom(shell.scroll[1] * 0.1)

@@ -1,0 +1,36 @@
+{
+  "name": "orbit-camera",
+  "version": "0.0.0",
+  "description": "Orbiting 3D camera for WebGL",
+  "main": "orbit.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "gl-matrix": "~2.0.0"
+  },
+  "devDependencies": {
+    "bunny": "~1.0.0",
+    "simple-3d-shader": "~0.0.0",
+    "gl-mesh": "~0.1.0",
+    "gl-now": "~0.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/orbit-camera.git"
+  },
+  "keywords": [
+    "orbit",
+    "camera"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "861a37161753635080e15b6567ede6a5f30b0ae5",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/orbit-camera/issues"
+  }
+}

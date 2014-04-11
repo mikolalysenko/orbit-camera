@@ -35,8 +35,8 @@ proto.view = function(out) {
 
 proto.lookAt = function(eye, center, up) {
   mat4.lookAt(scratch0, eye, center, up)
-  mat3FromMat4(scratch0, scratch0)
-  quatFromMat3(this.rotation, scratch0)
+  mat3.fromMat4(scratch0, scratch0)
+  quat.fromMat3(this.rotation, scratch0)
   vec3.copy(this.center, center)
   this.distance = vec3.distance(eye, center)
 }

@@ -6,8 +6,6 @@ var mat3 = glm.mat3
 var mat4 = glm.mat4
 var quat = glm.quat
 
-
-
 //Scratch variables
 var scratch0 = new Float32Array(16)
 var scratch1 = new Float32Array(16)

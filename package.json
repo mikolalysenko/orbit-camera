@@ -1,6 +1,6 @@
 {
   "name": "orbit-camera",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Orbiting 3D camera for WebGL",
   "main": "orbit.js",
   "directories": {

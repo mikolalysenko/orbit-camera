@@ -91,3 +91,4 @@ function createOrbitCamera(eye, target, up) {
 }
 
 module.exports = createOrbitCamera
+module.exports.OrbitCamera = OrbitCamera

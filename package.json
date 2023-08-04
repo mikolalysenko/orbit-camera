@@ -7,7 +7,7 @@
     "example": "example"
   },
   "dependencies": {
-    "gl-matrix": "^2.2.0"
+    "gl-matrix": "^3.4.3"
   },
   "devDependencies": {
     "bunny": "~1.0.0",
